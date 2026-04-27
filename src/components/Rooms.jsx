@@ -3,10 +3,10 @@ import React from "react";
 
 export default function Rooms() {
   const rooms = [
-    { name: "Suite Deluxe", price: "€189" ,image: "public/image/g1.jfif" 
+    { name: "Suite Deluxe", price: "€189" ,image: "/g1.jfif" 
 },
-    { name: "Chambre Standard", price: "€129" ,image: "public/image/g2.jfif" },
-    { name: "Suite Familiale", price: "€249" ,image:"public/image/g3.jfif"},
+    { name: "Chambre Standard", price: "€129" ,image: "/g2.jfif" },
+    { name: "Suite Familiale", price: "€249" ,image:"/g3.jfif"},
   ];
 
   return (
