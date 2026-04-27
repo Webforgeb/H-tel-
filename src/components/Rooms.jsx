@@ -25,7 +25,7 @@ export default function Rooms() {
 
           <h3>{room.name}</h3>
           <p>{room.price} / nuit</p>
-          <button>Réserver</button>
+          <button className="btn">Réserver</button>
         </div>
       ))}
     </div>

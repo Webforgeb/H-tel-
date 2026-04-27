@@ -1,13 +1,58 @@
+
+
 body {
   font-family: Arial;
   margin: 0;
   background: #f5f5f5;
 }
-
+/* navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  background: #660303;
+  color: white;
+  padding: 15px 20px;
+  position: relative;
+}
+
+/* menu desktop */
+.navbar ul {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  list-style: none;
+  margin: 0;
+}
+
+.navbar ul li {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.navbar ul li:hover {
+  color: #bda642;
+}
+
+/* button */
+.btn {
   background: #bda642;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* ☰ hidden in desktop */
+.menu-icon {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background: #660303;
   color: white;
   padding: 15px;
 }
@@ -16,15 +61,41 @@ body {
 }
 .rooms h2{
   text-align: center;
+  
+}
+.rooms btn{
+  background-color:#660303 ;
 }
 .navbar ul {
   display: flex;
   gap: 20px;
   list-style: none;
 }
+btn {
+  background: #660303;   /* أحمر غامق */
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px #660303;
+}
 
+/* hover effect */
+.btn:hover {
+  background: #660303;   /* أفتح شوية */
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px #660303;
+}
+
+/* click effect */
+.btn:active {
+  transform: scale(0.97);
+}
 .btn {
-  background: rgb(194, 191, 174);
+  background: #660303;
   border: none;
   padding: 5px 10px;
 }
@@ -141,7 +212,7 @@ body {
 /* focus effect */
 .contact input:focus,
 .contact textarea:focus {
-  border-color: #4a90e2;
+  border-color: #660303;
   box-shadow: 0 0 8px rgba(74,144,226,0.3);
 }
 
@@ -149,7 +220,7 @@ body {
 .contact button {
   width: 100%;
   padding: 12px;
-  background: #bda642;
+  background: #660303;
   color: white;
   border: none;
   border-radius: 10px;
@@ -159,7 +230,7 @@ body {
 }
 
 .contact button:hover {
-  background: #bda642;
+  background: #8b0a0a;
   transform: translateY(-2px);
 }
 
@@ -203,7 +274,7 @@ body {
   content: "";
   width: 60px;
   height: 4px;
-  background: #4a90e2;
+  background: #660303;
   position: absolute;
   left: 0;
   bottom: -10px;
@@ -214,4 +285,89 @@ body {
   font-size: 16px;
   line-height: 1.8;
   color: #555;
+}
+/* ====== MEDIA QUERY (Phones) ====== */
+@media screen and (max-width: 768px) {
+
+  /* navbar */
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+  }
+
+  /* services */
+  .services .grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* rooms */
+  .grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  /* about section */
+  .about {
+    flex-direction: column;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .about img,
+  .about div {
+    width: 100%;
+  }
+
+  .about img {
+    height: 250px;
+  }
+
+  /* contact */
+  .contact {
+    margin: 30px 15px;
+    padding: 20px;
+  }
+
+  .contact h2 {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 768px) {
+
+  .menu-icon {
+    display: block;
+  }
+
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #660303;
+    padding: 20px 0;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .navbar ul.active {
+    display: flex;
+  }
+
+  .btn {
+    width: 80%;
+  }
 }
