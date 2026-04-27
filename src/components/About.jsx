@@ -5,7 +5,7 @@ import React from "react";
 export default function About() {
   return (
     <section className="about">
-      <img src="public/hotel.jpeg" alt="" />
+      <img src="/hotel.jpeg" alt="" />
 
       <div>
         <h2>À propos</h2>
